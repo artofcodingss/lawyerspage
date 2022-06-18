@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name lawyerspage.de;
+    root /var/www/legaltechsupportify;
+    index index.html;
+    location / {
+         try_files $uri $uri/ /index.html;
+    }
+}
