@@ -381,7 +381,7 @@
                                 oder online in der Videosprechstunde.</div>
                             <div class="dl-profile-anchor" id="location"></div>
                             <div class="dl-profile-card">
-                                <div class="dl-profile-card-section">
+                                <div class="dl-profile-card-section dl-map-container">
                                     <div class="dl-profile-card-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
                                             <path
@@ -927,8 +927,8 @@
                                                             <div class="dl-layout-container dl-layout-spacing-xs-0">
                                                                 <div class="dl-step-children dl-layout-item dl-layout-size-xs-12 dl-layout-size-sm-12">
                                                                     <div class="booking-availabilities" style="position: relative;">
-                                                                        <div style="overflow: visible; width: 0px;">
-                                                                            <div class="dl-desktop-availabilities availabilities-pagination-disabled dl-desktop-availabilities-flat" style="width: 337px;">
+                                                                        <div style="overflow: visible;">
+                                                                            <div class="dl-desktop-availabilities availabilities-pagination-disabled dl-desktop-availabilities-flat custom-calender-width">
                                                                                 <div class="dl-desktop-availabilities-inner">
                                                                                     <div class="dl-desktop-availabilities-days dl-opacity-0-8">
                                                                                         <div class="availabilities-pagination availabilities-pagination-disabled">
@@ -1151,6 +1151,87 @@
             .display-none{
                 display: none
             }
+            .custom-calender-width{
+                width: 337px;
+            }
+            .map-container img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @media screen and (max-width: 1200px) {
+                .custom-calender-width{
+                    width: 300px;
+                }
+                .availabilities-pagination{
+                    width: 14px;
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 1024px) {
+                .custom-calender-width{
+                    width: 280px;
+                }
+            }
+            @media screen and (max-width: 991px) {
+                .custom-calender-width{
+                    width: 240px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .custom-calender-width{
+                    width: 100%;
+                }
+                .dl-profile-header-name{
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding-top: 20px;
+                }
+                .availabilities-pagination{
+                    width: 24px;
+                    display: block;
+                }
+                .dl-map-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .map-container{
+                    height: 300px !important; 
+                    margin-top: 20px;
+                }
+                .map-container img{
+                    object-fit: contain;
+                }
+                .dl-profile-doctor-place-map{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                .dl-profile-header-name{
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding-top: 15px; 
+                }
+                .dl-profile-header-speciality{
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 320px) {
+                .custom-calender-width{
+                    width: 100%;
+                }
+                .dl-profile-header-name{
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-top: 10px; 
+                }
+                .availabilities-pagination{
+                    display: none;
+                }
+            }
+            
         </style>
         <script>
             $(function(){
