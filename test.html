@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+  </head>
+  <body>
+    <div id="d">
+      
+    </div>
+    <script>
+    
+      // thirdpartyfunction((data,data1)=>{
+      //   console.log(data);
+      //   console.log(data1)
+      // });
+
+      // function fn1(data,data1){
+      //   console.log(data);
+      //   console.log(data1)
+      // }
+
+      // (function thirdpartyfunction(arg){
+      //   var a = 10;
+      //   var b = 11;
+      //   arg(a,b);
+      // })(fn1);
+
+      // var d  = document.getElementById('d');
+      // updatedom();
+      
+      // async function updatedom(){
+      //   var a  = await callapi();
+      //   d.innerHTML = a;
+      // }
+      function callapi(){
+        var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = async function() {
+              if (this.readyState == 4 && this.status == 200) {
+                var a = xhttp.responseText;
+                res(a);
+              }
+          };
+          xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+          xhttp.send();
+      }
+
+        
+    </script>
+  </body>
+  </html>
